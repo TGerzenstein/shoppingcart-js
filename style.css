@@ -4,3 +4,8 @@ h1 {
     color: lightslategray;
     padding: 1rem 2rem;
 }
+
+.bg-form {
+    padding: 1.875rem 3.125rem;
+    margin: 0.300rem 0rem 3.125rem; 
+}
