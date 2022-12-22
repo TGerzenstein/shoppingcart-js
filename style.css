@@ -1,11 +1,20 @@
 
-h1 {
-    font-size: 1.50rem;
+.tittle-page {
+    font-size: 1.80rem;
     color: lightslategray;
     padding: 1rem 2rem;
+    font-family: 'Montserrat', sans-serif;;
 }
 
 .bg-form {
     padding: 1.875rem 3.125rem;
     margin: 0.300rem 0rem 3.125rem; 
+}
+
+.body-index {
+    background-color: #fff;
+}
+
+footer {
+    padding: 3rem;
 }
