@@ -47,11 +47,18 @@ for(let i=0; i<baseDeDatos.length; i++) {
 
     aux +=
     `
-    <div style= "padding: 3rem;">  
+    <div style= "padding: 2rem;
+                 width: 30%;
+                 height: 40%;
+                 background-color: #fff;
+                 margin: 2rem;
+                 display: flex;
+                 flex-direction: column;">  
         <img src="/zapas.jpg" alt="..."
-        style= "width: 20%;
-            background-color: white;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        style= "width: 70%;
+                height: 70%;  
+                background-color: white;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
         <h2  style= "font-size: 1.90rem;
                     padding-top: 1rem;
                     ">${baseDeDatos[i].marca}</h2> 
