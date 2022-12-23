@@ -8,6 +8,22 @@
     margin: 0rem;
 }
 
+.bg-color {
+    background-color: #F05555;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.nav-link .active {
+    transition: none;
+}
+
+.btn-outline-success {
+    color: #fff;
+}
+
 .body-index {
     background-color: #003366;
     margin: 0rem;
@@ -30,6 +46,6 @@
 }
 
 footer {
-    padding: 3rem;
+    padding: 4rem;
     background-color: #F05555;
 }
