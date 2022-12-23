@@ -59,14 +59,14 @@ for(let i=0; i<baseDeDatos.length; i++) {
                 height: 70%;  
                 background-color: white;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-        <h2  style= "font-size: 1.90rem;
+        <h2  style= "font-size: 1.50rem;
                     padding-top: 1rem;
                     ">${baseDeDatos[i].marca}</h2> 
         <h3 
             style= "color: grey;
             padding-top: 0.30rem;
             padding-bottom: 0.40rem;
-            font-size: 1.60rem;
+            font-size: 1.10rem;
             ">${baseDeDatos[i].precio}</h3> 
         <button onclick="AgregarAlCarrito">Agregar al carrito</button>   
     </div>
