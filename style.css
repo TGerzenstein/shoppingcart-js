@@ -24,7 +24,7 @@
     color: #fff;
 }
 
-.body-index {
+.main-index {
     background-color: #003366;
     margin: 0rem;
 }
@@ -41,7 +41,7 @@
 }
 
 .row {
-    margin: 0rem;
+    margin: 2rem;
     width: 70%;
 }
 
