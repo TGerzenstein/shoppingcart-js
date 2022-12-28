@@ -51,7 +51,7 @@ for(let i=0; i<baseDeDatos.length; i++) {
                  width: 30%;
                  height: 40%;
                  background-color: #fff;
-                 margin: 2rem;
+                 margin-left: 2rem;
                  display: flex;
                  flex-direction: column;">  
         <img src="/zapas.jpg" alt="..."
@@ -59,7 +59,7 @@ for(let i=0; i<baseDeDatos.length; i++) {
                 height: 70%;  
                 background-color: white;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-        <h2  style= "font-size: 1.50rem;
+        <h2  style= "font-size: 1.20rem;
                     padding-top: 1rem;
                     ">${baseDeDatos[i].marca}</h2> 
         <h3 
