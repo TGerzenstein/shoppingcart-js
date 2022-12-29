@@ -34,14 +34,11 @@
 }
 
 .bg-form {
-    padding: 1.875rem 1rem;
+    padding: 1.875rem 2rem;
     background-color: #fff;
-    width: 95%;
-}
-
-.row {
-    margin: 2rem;
-    width: 70%;
+    width: 55%;
+    height: 60%;
+    margin: 2rem 2rem 5rem;
 }
 
 footer {
