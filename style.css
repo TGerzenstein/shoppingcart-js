@@ -34,10 +34,9 @@
 }
 
 .bg-form {
-    padding: 1.875rem 0.20rem;
-    margin: 0.300rem 0rem 3.125rem 1rem;
+    padding: 1.875rem 1rem;
     background-color: #fff;
-    width: 75%;
+    width: 95%;
 }
 
 .row {

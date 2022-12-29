@@ -55,8 +55,8 @@ for(let i=0; i<baseDeDatos.length; i++) {
                  display: flex;
                  flex-direction: column;">  
         <img src="/zapas.jpg" alt="..."
-        style= "width: 70%;
-                height: 70%;  
+        style= "width: 100%;
+                height: 60%;  
                 background-color: white;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
         <h2  style= "font-size: 1.20rem;
@@ -68,7 +68,8 @@ for(let i=0; i<baseDeDatos.length; i++) {
             padding-bottom: 0.40rem;
             font-size: 1.10rem;
             ">${baseDeDatos[i].precio}</h3> 
-        <button onclick="AgregarAlCarrito">Agregar al carrito</button>   
+        <button onclick="AgregarAlCarrito"
+        style= "width: 60%;">Agregar al carrito</button>   
     </div>
     `;
     }
