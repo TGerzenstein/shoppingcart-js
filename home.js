@@ -40,8 +40,7 @@ baseDeDatos.push(producto5);
 baseDeDatos.push(producto6);
 
 
-
-let aux = ` `
+let aux = ` `;
 for(let i=0; i<baseDeDatos.length; i++) {
     if ( baseDeDatos[i].stock > 0 ) {
 
@@ -72,15 +71,25 @@ for(let i=0; i<baseDeDatos.length; i++) {
         style= "width: 60%;">Agregar al carrito</button>   
     </div>
     `;
-    }
+    } else {
+        aux += `
+        <h2>Sin stock disponible</h2>`
+    };
 };
-
 
 document.getElementById("productos").innerHTML = aux;
 
 let carrito = [baseDeDatos];
 
-
 function agregarAlCarrito() {
      localStorage.setItem("carrito",JSON.stringify(carrito));
+};
+
+function borrarUnProducto() {
+    const nuevoCarrito = [];
+    for (let i = 0; i < carrito.length; i++) {
+      if  (i != 1) {
+        nuevoCarrito.push(carrito[i]);
+      };
+    };
 };
