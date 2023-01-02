@@ -67,8 +67,8 @@ for(let i=0; i<baseDeDatos.length; i++) {
             padding-bottom: 0.40rem;
             font-size: 1.10rem;
             ">${baseDeDatos[i].precio}</h3> 
-        <button onclick="AgregarAlCarrito"
-        style= "width: 60%;">Agregar al carrito</button>   
+        <button onclick="agregarAlCarrito(${baseDeDatos[i]})"
+        style= "width: 60%;">Agregar al carritstockProductoo</button>   
     </div>
     `;
     } else {
@@ -79,10 +79,18 @@ for(let i=0; i<baseDeDatos.length; i++) {
 
 document.getElementById("productos").innerHTML = aux;
 
-let carrito = [baseDeDatos];
+//Funcionamiento del carrito
+let carrito = [];
 
-function agregarAlCarrito() {
-     localStorage.setItem("carrito",JSON.stringify(carrito));
+if (localStorage.getItem("carrito") != null) {
+   console.log("Entro a la validación");
+   let valoresDelCarrito = JSON.parse(localStorage.getItem("carrito"));
+   carrito = valoresDelCarrito;
+}
+
+function agregarAlCarrito(producto) {
+
+    localStorage.setItem("carrito",JSON.stringify(carrito));
 };
 
 function borrarUnProducto() {
@@ -92,4 +100,6 @@ function borrarUnProducto() {
         nuevoCarrito.push(carrito[i]);
       };
     };
+    localStorage.setItem('carrito', JSON.stringify(nuevoCarrito));
+    carrito = nuevoCarrito;
 };
