@@ -1,4 +1,6 @@
 
+document.getElementById("other-style").style.fontSize = "1.80rem";
+let carrito = [];
 
 class Producto {
     constructor (
@@ -67,8 +69,7 @@ for(let i=0; i<baseDeDatos.length; i++) {
             padding-bottom: 0.40rem;
             font-size: 1.10rem;
             ">${baseDeDatos[i].precio}</h3> 
-        <button onclick="agregarAlCarrito(${baseDeDatos[i]})"
-        style= "width: 60%;">Agregar al carritstockProductoo</button>   
+        <button style= "width: 60%;" onclick='agregarAlCarrito(${JSON.stringify(baseDeDatos[i])})'>Agregar al carrito</button>   
     </div>
     `;
     } else {
@@ -80,7 +81,6 @@ for(let i=0; i<baseDeDatos.length; i++) {
 document.getElementById("productos").innerHTML = aux;
 
 //Funcionamiento del carrito
-let carrito = [];
 
 if (localStorage.getItem("carrito") != null) {
    console.log("Entro a la validación");
@@ -89,7 +89,8 @@ if (localStorage.getItem("carrito") != null) {
 }
 
 function agregarAlCarrito(producto) {
-
+    carrito.push(producto);
+    console.log(carrito);
     localStorage.setItem("carrito",JSON.stringify(carrito));
 };
 
