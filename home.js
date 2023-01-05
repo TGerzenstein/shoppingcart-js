@@ -86,7 +86,7 @@ if (localStorage.getItem("carrito") != null) {
    console.log("Entro a la validación");
    let valoresDelCarrito = JSON.parse(localStorage.getItem("carrito"));
    carrito = valoresDelCarrito;
-}
+};
 
 function agregarAlCarrito(producto) {
     carrito.push(producto);

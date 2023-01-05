@@ -28,6 +28,17 @@
     margin: 0rem;
 }
 
+.d-pos {
+    display: flex;
+    justify-items: center;
+}
+
+.w-img {
+    height: 40%;
+    width: 40%;
+    margin: 2rem;
+}
+
 .body-contact {
     background-color: #003366; 
 }
