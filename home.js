@@ -28,48 +28,51 @@ class Producto {
     };
 };
 
-mostrarProductosEnPantalla();
-
-
-let baseDeDatos = [
-    producto1,
-    producto2,
-    producto3,
-    producto4,
-    producto5,
-    producto6,
-];
-
 
 let producto1 = new Producto (
     "Coreracer Adidas",
     "$42000", 
-    12 );
+    12 
+    );
 
 let producto2 = new Producto (
     "Nike", 
     "$12000", 
-    12 );
+    12 
+    );
 
 let producto3 = new Producto (
     "New Balance", 
     "$32000", 
-    0 );
+    0
+    );
 
 let producto4 = new Producto (
     "Salomon", 
     "$16000", 
-    12 );
+    12 
+    );
 
 let producto5 = new Producto (
     "Montagne", 
     "$30000", 
-    12 );
+    12 
+    );
 
 let producto6 = new Producto (
     "Converse", 
     "$14000", 
-    12 );
+    12 
+    );
+
+let baseDeDatos = [
+        producto1,
+        producto2,
+        producto3,
+        producto4,
+        producto5,
+        producto6,
+    ];
 
 
 let aux = ` `;
@@ -114,11 +117,16 @@ document.getElementById("productos").innerHTML = aux;
 
 function agregarAlCarrito(producto) {
     carrito.push(producto);
-    console.log(carrito);
     localStorage.setItem("carrito",JSON.stringify(carrito));
-};
+    
+    let aux = 0; 
+    for (let i = 0; i < carrito.length; i++) {
+        aux =+ carrito[i].precio;
+    };
 
-agregarAlCarrito();
+    document.getElementById("precio-total").innerHTML = "U$S" +aux;
+    document.getElementById("contador").innerHTML = carrito.length;
+};
 
 function borrarUnProducto() {
     const nuevoCarrito = [];
