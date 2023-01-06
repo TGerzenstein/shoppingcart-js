@@ -10,10 +10,7 @@ if (localStorage.getItem("carrito") != null) {
 };
 
 class Producto {
-    constructor (
-        nombreMarca,
-        precioProducto,
-        stockProducto ) 
+    constructor (nombreMarca, precioProducto,stockProducto ) 
         
     {
         this.marca = nombreMarca;
@@ -21,15 +18,17 @@ class Producto {
         this.stock = stockProducto;
     };
 
-  //  mostrarProductosEnPantalla() {
-    //    document.getElementById("carrito").innerHTML = `
-    //    <div>  
-    //         <h2>  ${this.marca}  </h2> 
-    //         <p>  ${this.precio}  </p> 
-    //   </div> 
-    //   `
+    mostrarProductosEnPantalla() {
+        document.getElementById("carrito").innerHTML = `
+        <div>  
+            <h2>  ${this.marca}  </h2> 
+            <p>  ${this.precio}  </p> 
+        </div> 
+        `
+    };
 };
 
+mostrarProductosEnPantalla();
 
 
 let baseDeDatos = [
@@ -118,6 +117,8 @@ function agregarAlCarrito(producto) {
     console.log(carrito);
     localStorage.setItem("carrito",JSON.stringify(carrito));
 };
+
+agregarAlCarrito();
 
 function borrarUnProducto() {
     const nuevoCarrito = [];
