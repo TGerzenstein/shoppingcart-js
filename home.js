@@ -31,48 +31,41 @@ class Producto {
 
 let producto1 = new Producto (
     "Coreracer Adidas",
-    "$42000", 
+    42000, 
     12 
     );
 
 let producto2 = new Producto (
     "Nike", 
-    "$12000", 
+    12000, 
     12 
     );
 
 let producto3 = new Producto (
     "New Balance", 
-    "$32000", 
+    32000, 
     0
     );
 
 let producto4 = new Producto (
     "Salomon", 
-    "$16000", 
+    16000, 
     12 
     );
 
 let producto5 = new Producto (
     "Montagne", 
-    "$30000", 
+    30000, 
     12 
     );
 
 let producto6 = new Producto (
     "Converse", 
-    "$14000", 
+    14000, 
     12 
     );
 
-let baseDeDatos = [
-        producto1,
-        producto2,
-        producto3,
-        producto4,
-        producto5,
-        producto6,
-    ];
+let baseDeDatos = [producto1, producto2, producto3, producto4, producto5, producto6];
 
 
 let aux = ` `;
@@ -111,14 +104,10 @@ for(let i=0; i<baseDeDatos.length; i++) {
     };
 };
 
-document.getElementById("productos").innerHTML = aux;
-
-//Funcionamiento del carrito
-
 function agregarAlCarrito(producto) {
     carrito.push(producto);
     localStorage.setItem("carrito",JSON.stringify(carrito));
-    
+    console.log(carrito);
     let aux = 0; 
     for (let i = 0; i < carrito.length; i++) {
         aux =+ carrito[i].precio;
@@ -127,6 +116,8 @@ function agregarAlCarrito(producto) {
     document.getElementById("precio-total").innerHTML = "U$S" +aux;
     document.getElementById("contador").innerHTML = carrito.length;
 };
+
+document.getElementById("productos").innerHTML = aux;
 
 function borrarUnProducto() {
     const nuevoCarrito = [];
