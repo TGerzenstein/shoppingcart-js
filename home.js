@@ -4,11 +4,6 @@ document.getElementById("other-style").style.fontSize = "1.80rem";
 
 let carrito = [];
 
-if (localStorage.getItem("carrito") != null) {
-   carrito = JSON.parse(localStorage.getItem("carrito"));
-   document.getElementById("contador").innerHTML = carrito.length;
-};
-
 class Producto {
     constructor (nombreMarca, precioProducto,stockProducto ) 
         
@@ -103,30 +98,3 @@ for(let i=0; i<baseDeDatos.length; i++) {
         <h2>Sin stock disponible</h2>`
     };
 };
-
-function agregarAlCarrito(producto) {
-    carrito.push(producto);
-    localStorage.setItem("carrito",JSON.stringify(carrito));
-    console.log(carrito);
-    let aux = 0; 
-    for (let i = 0; i < carrito.length; i++) {
-        aux =+ carrito[i].precio;
-    };
-
-    document.getElementById("precio-total").innerHTML = "U$S" +aux;
-    document.getElementById("contador").innerHTML = carrito.length;
-};
-
-document.getElementById("productos").innerHTML = aux;
-
-function borrarUnProducto() {
-    const nuevoCarrito = [];
-    for (let i = 0; i < carrito.length; i++) {
-      if  (i != 1) {
-        nuevoCarrito.push(carrito[i]);
-      };
-    };
-    localStorage.setItem('carrito', JSON.stringify(nuevoCarrito));
-    carrito = nuevoCarrito;
-};
-
